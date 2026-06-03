@@ -66,6 +66,7 @@ sudo systemctl status isc-dhcp-server
 ```
 
 **Expected status output (healthy service):**
+<img width="1063" height="211" alt="Screenshot 2026-06-01 154137" src="https://github.com/user-attachments/assets/55d4d538-e4ce-43d2-a6b1-e6e3048fe644" />
 
 ```
 ● isc-dhcp-server.service - ISC DHCP IPv4 server
@@ -322,8 +323,6 @@ sudo systemctl stop    isc-dhcp-server
 sudo systemctl restart isc-dhcp-server
 sudo systemctl enable  isc-dhcp-server
 sudo systemctl status  isc-dhcp-server
-<img width="1063" height="211" alt="Screenshot 2026-06-01 154137" src="https://github.com/user-attachments/assets/0127612f-8ccd-45db-8f08-2f08f4fdf4cc" />
-
 # ── Config Files ──────────────────────────────────────────────
 sudo nano /etc/default/isc-dhcp-server   # Set listening interface
 sudo nano /etc/dhcp/dhcpd.conf           # Main DHCP configuration
@@ -333,7 +332,6 @@ sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf
 
 # ── Logs & Monitoring ─────────────────────────────────────────
 tail /var/log/syslog
-<img width="1301" height="208" alt="Screenshot 2026-06-01 155815" src="https://github.com/user-attachments/assets/645bb9e0-4b27-48a8-b74f-b6b3f3413d2e" />
 tail -f /var/log/syslog
 journalctl -u isc-dhcp-server -f
 cat /var/lib/dhcp/dhcpd.leases
