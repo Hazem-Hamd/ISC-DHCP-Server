@@ -98,6 +98,8 @@ INTERFACESv6=""
 ```
 
 > **Note:** Replace `enp0s3` with your actual interface name. Run `ip a` to list your interfaces.
+> <img width="704" height="367" alt="Screenshot 2026-06-01 153435" src="https://github.com/user-attachments/assets/06e1b8dd-5c6d-4ca4-a3d4-03ecdfe2eca6" />
+
 
 ---
 
@@ -320,6 +322,7 @@ sudo systemctl stop    isc-dhcp-server
 sudo systemctl restart isc-dhcp-server
 sudo systemctl enable  isc-dhcp-server
 sudo systemctl status  isc-dhcp-server
+<img width="1063" height="211" alt="Screenshot 2026-06-01 154137" src="https://github.com/user-attachments/assets/0127612f-8ccd-45db-8f08-2f08f4fdf4cc" />
 
 # ── Config Files ──────────────────────────────────────────────
 sudo nano /etc/default/isc-dhcp-server   # Set listening interface
@@ -330,6 +333,7 @@ sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf
 
 # ── Logs & Monitoring ─────────────────────────────────────────
 tail /var/log/syslog
+<img width="1301" height="208" alt="Screenshot 2026-06-01 155815" src="https://github.com/user-attachments/assets/645bb9e0-4b27-48a8-b74f-b6b3f3413d2e" />
 tail -f /var/log/syslog
 journalctl -u isc-dhcp-server -f
 cat /var/lib/dhcp/dhcpd.leases
@@ -343,6 +347,7 @@ ipconfig /renew
 ---
 
 ## Network Summary
+<img width="352" height="430" alt="Screenshot 2026-06-01 155707" src="https://github.com/user-attachments/assets/8fb0a5ec-3986-4e6d-97b0-6bc8bdc25982" />
 
 ```
 Server IP  :  192.168.1.100
